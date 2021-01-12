@@ -101,6 +101,8 @@ class LocalSerializerTest : public ::testing::Test {
   remote::Serializer remote_serializer;
   local::LocalSerializer serializer;
 
+  Timestamp write_time_ = Timestamp::Now();
+
   template <typename... Args>
   void ExpectRoundTrip(const Args&... args) {
     // First, serialize model with our (nanopb based) serializer, then
@@ -138,9 +140,9 @@ class LocalSerializerTest : public ::testing::Test {
     EXPECT_EQ(model, actual_model);
   }
 
-  ByteString EncodeMaybeDocument(local::LocalSerializer* serializer,
+  ByteString EncodeMaybeDocument(local::LocalSerializer* localSerializer,
                                  const MaybeDocument& maybe_doc) {
-    return MakeByteString(serializer->EncodeMaybeDocument(maybe_doc));
+    return MakeByteString(localSerializer->EncodeMaybeDocument(maybe_doc));
   }
 
   void ExpectSerializationRoundTrip(const TargetData& target_data,
@@ -163,10 +165,10 @@ class LocalSerializerTest : public ::testing::Test {
     EXPECT_EQ(target_data, actual_target_data);
   }
 
-  ByteString EncodeTargetData(local::LocalSerializer* serializer,
+  ByteString EncodeTargetData(local::LocalSerializer* localSerializer,
                               const TargetData& target_data) {
     EXPECT_EQ(target_data.purpose(), QueryPurpose::Listen);
-    return MakeByteString(serializer->EncodeTargetData(target_data));
+    return MakeByteString(localSerializer->EncodeTargetData(target_data));
   }
 
   void ExpectSerializationRoundTrip(
@@ -180,10 +182,20 @@ class LocalSerializerTest : public ::testing::Test {
   void ExpectDeserializationRoundTrip(
       const MutationBatch& model,
       const ::firestore::client::WriteBatch& proto) {
+    for (int i = 0; i < proto.writes_size(); ++i) {
+      printf("\nindex %i: has transform before %d", i,
+             proto.writes(i).has_transform());
+    }
     ByteString bytes = ProtobufSerialize(proto);
     StringReader reader(bytes);
 
     auto message = Message<firestore_client_WriteBatch>::TryParse(&reader);
+    // TODO: help mrschmidt! Why are there field transforms here after it's been
+    // parsed when running the EncodesMutationBatchTest?
+    for (size_t i = 0; i < message->writes_count; ++i) {
+      printf("\nindex %zu: has transform after %d", i,
+             message->writes[i].transform.field_transforms_count);
+    }
     MutationBatch actual_mutation_batch =
         serializer.DecodeMutationBatch(&reader, *message);
 
@@ -191,14 +203,80 @@ class LocalSerializerTest : public ::testing::Test {
     EXPECT_EQ(model, actual_mutation_batch);
   }
 
-  ByteString EncodeMutationBatch(local::LocalSerializer* serializer,
+  ByteString EncodeMutationBatch(local::LocalSerializer* localSerializer,
                                  const MutationBatch& mutation_batch) {
-    return MakeByteString(serializer->EncodeMutationBatch(mutation_batch));
+    return MakeByteString(localSerializer->EncodeMutationBatch(mutation_batch));
   }
 
   std::string message_differences;
   MessageDifferencer msg_diff;
 };
+
+// TODO(b/174608374): Remove these tests once we perform a schema migration.
+TEST_F(LocalSerializerTest, SetMutationAndTransformMutationAreSquashed) {
+  // Create first set proto
+  v1::Value b_value{};
+  *b_value.mutable_string_value() = "b";
+  v1::Value one_value{};
+  one_value.set_integer_value(1);
+
+  v1::Write set_proto{};
+  *set_proto.mutable_update()->mutable_name() =
+      "projects/p/databases/d/documents/docs/1";
+  (*set_proto.mutable_update()->mutable_fields())["a"] = b_value;
+  (*set_proto.mutable_update()->mutable_fields())["num"] = one_value;
+
+  // All the shit for transform
+  v1::Write transform_proto{};
+
+  v1::DocumentTransform::FieldTransform inc_proto1;
+  v1::Value inc1_value{};
+  inc1_value.set_integer_value(42);
+  inc_proto1.set_field_path("integer");
+  inc_proto1.set_allocated_increment(&inc1_value);
+
+  v1::DocumentTransform::FieldTransform inc_proto2;
+  v1::Value inc2_value{};
+  inc2_value.set_double_value(13.37);
+  inc_proto2.set_field_path("double");
+  inc_proto2.set_allocated_increment(&inc2_value);
+
+  *transform_proto.mutable_transform()->add_field_transforms() =
+      std::move(inc_proto1);
+  *transform_proto.mutable_transform()->add_field_transforms() =
+      std::move(inc_proto2);
+
+  transform_proto.mutable_current_document()->set_exists(true);
+  transform_proto.mutable_transform()->set_document(
+      "projects/p/databases/d/documents/docs/1");
+
+  // Create write-time proto
+  ::google::protobuf::Timestamp write_time_proto{};
+  write_time_proto.set_seconds(write_time_.seconds());
+  write_time_proto.set_nanos(write_time_.nanoseconds());
+
+  // Put the shit together
+  ::firestore::client::WriteBatch batch_proto{};
+  batch_proto.set_batch_id(42);
+  *batch_proto.add_writes() = set_proto;
+  *batch_proto.add_writes() = transform_proto;
+  *batch_proto.mutable_local_write_time() = write_time_proto;
+
+  ByteString bytes = ProtobufSerialize(batch_proto);
+  StringReader reader(bytes);
+  auto message = Message<firestore_client_WriteBatch>::TryParse(&reader);
+  printf("done0");
+  MutationBatch decoded = serializer.DecodeMutationBatch(&reader, *message);
+  printf("done1");
+  ASSERT_EQ(1, decoded.mutations().size());
+  printf("done2");
+  ASSERT_EQ(Mutation::Type::Set, decoded.mutations()[0].type());
+  printf("done3");
+  //    _google_firestore_v1_Write encoded =
+  //    remote_serializer.EncodeMutation(decoded.mutations()[0]);
+  //    ExpectRoundTrip(encoded, encoded);
+  printf("done4");
+}
 
 TEST_F(LocalSerializerTest, EncodesMutationBatch) {
   Mutation base =
