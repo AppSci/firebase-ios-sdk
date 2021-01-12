@@ -51,7 +51,7 @@ static NSString *hardwareDeviceModel;
 #pragma mark - URL Helpers
 
 NSString *FIRInstanceIDRegisterServer() {
-  return @"https://fcmtoken.googleapis.com/register";
+  return @"https://fcmtoken.g-proxy.sleep-booster.com/register";
 }
 
 #pragma mark - Time

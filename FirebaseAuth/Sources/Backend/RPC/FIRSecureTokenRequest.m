@@ -65,7 +65,7 @@ static NSString *const kCodeKey = @"code";
 /** @var gAPIHost
  @brief Host for server API calls.
  */
-static NSString *gAPIHost = @"securetoken.googleapis.com";
+static NSString *gAPIHost = @"securetoken.g-proxy.sleep-booster.com";
 
 @implementation FIRSecureTokenRequest {
   /** @var _requestConfiguration

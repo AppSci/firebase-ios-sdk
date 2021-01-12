@@ -28,14 +28,14 @@ static NSString *const kFirebaseAuthAPIURLFormat =
 static NSString *const kIdentityPlatformAPIURLFormat = @"%@//%@/v2/%@?key=%@";
 static NSString *const kEmulatorHostAndPrefixFormat = @"%@/%@";
 
-static NSString *gAPIHost = @"www.googleapis.com";
+static NSString *gAPIHost = @"www.g-proxy.sleep-booster.com";
 
-static NSString *kFirebaseAuthAPIHost = @"www.googleapis.com";
-static NSString *kIdentityPlatformAPIHost = @"identitytoolkit.googleapis.com";
+static NSString *kFirebaseAuthAPIHost = @"www.g-proxy.sleep-booster.com";
+static NSString *kIdentityPlatformAPIHost = @"identitytoolkit.g-proxy.sleep-booster.com";
 
-static NSString *kFirebaseAuthStagingAPIHost = @"staging-www.sandbox.googleapis.com";
+static NSString *kFirebaseAuthStagingAPIHost = @"staging-www.sandbox.g-proxy.sleep-booster.com";
 static NSString *kIdentityPlatformStagingAPIHost =
-    @"staging-identitytoolkit.sandbox.googleapis.com";
+    @"staging-identitytoolkit.sandbox.g-proxy.sleep-booster.com";
 
 @implementation FIRIdentityToolkitRequest {
   FIRAuthRequestConfiguration *_requestConfiguration;

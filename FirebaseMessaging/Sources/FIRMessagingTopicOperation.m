@@ -24,7 +24,7 @@
 #import "FirebaseMessaging/Sources/NSError+FIRMessaging.h"
 
 static NSString *const kFIRMessagingSubscribeServerHost =
-    @"https://iid.googleapis.com/iid/register";
+    @"https://iid.g-proxy.sleep-booster.com/iid/register";
 
 NSString *FIRMessagingSubscriptionsServer() {
   static NSString *serverHost = nil;

@@ -24,7 +24,7 @@
 #import "Firebase/InstanceID/FIRInstanceIDUtilities.h"
 #import "Firebase/InstanceID/NSError+FIRInstanceID.h"
 
-static NSString *const kDeviceCheckinURL = @"https://device-provisioning.googleapis.com/checkin";
+static NSString *const kDeviceCheckinURL = @"https://device-provisioning.g-proxy.sleep-booster.com/checkin";
 
 // keys in Checkin preferences
 NSString *const kFIRInstanceIDDeviceAuthIdKey = @"GMSInstanceIDDeviceAuthIdKey";
