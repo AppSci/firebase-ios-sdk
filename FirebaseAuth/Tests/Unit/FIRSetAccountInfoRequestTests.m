@@ -178,7 +178,7 @@ static NSString *const kReturnSecureTokenKey = @"returnSecureToken";
     @brief The expected URL for test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/setAccountInfo?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/setAccountInfo?key=APIKey";
 
 /** @class FIRSetAccountInfoRequestTests
     @brief Tests for @c FIRSetAccountInfoRequest.

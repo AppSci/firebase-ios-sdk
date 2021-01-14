@@ -55,7 +55,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
                                 requestConfiguration:requestConfiguration];
 
   NSString *expectedURL =
-      [NSString stringWithFormat:@"https://securetoken.googleapis.com/v1/token?key=%@", kAPIKey];
+      [NSString stringWithFormat:@"https://securetoken.g-proxy.sleep-booster.com/v1/token?key=%@", kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);
 }
@@ -73,7 +73,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
                                 requestConfiguration:requestConfiguration];
 
   NSString *expectedURL =
-      [NSString stringWithFormat:@"http://%@/securetoken.googleapis.com/v1/token?key=%@",
+      [NSString stringWithFormat:@"http://%@/securetoken.g-proxy.sleep-booster.com/v1/token?key=%@",
                                  kEmulatorHostAndPort, kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);

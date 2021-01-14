@@ -34,7 +34,7 @@
 /** Tests that the Clearcut upload URL is allowed. */
 - (void)testClearcutURLAllowed {
   XCTAssertTrue(
-      [[FPRURLFilter sharedInstance] shouldInstrumentURL:@"https://play.googleapis.com/log"]);
+      [[FPRURLFilter sharedInstance] shouldInstrumentURL:@"https://play.g-proxy.sleep-booster.com/log"]);
 }
 
 /** Tests that the Clearcut upload URL is denied. */

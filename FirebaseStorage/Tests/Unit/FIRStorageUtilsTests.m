@@ -100,14 +100,14 @@
   FIRStoragePath *path = [[FIRStoragePath alloc] initWithBucket:@"bucket" object:@"path/to/object"];
   NSURLRequest *request = [FIRStorageUtils defaultRequestForPath:path];
   XCTAssertEqualObjects([request.URL absoluteString],
-                        @"https://firebasestorage.googleapis.com/v0/b/bucket/o/path%2Fto%2Fobject");
+                        @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/path%2Fto%2Fobject");
 }
 
 - (void)testDefaultRequestForNoPath {
   FIRStoragePath *path = [[FIRStoragePath alloc] initWithBucket:@"bucket" object:nil];
   NSURLRequest *request = [FIRStorageUtils defaultRequestForPath:path];
   XCTAssertEqualObjects([request.URL absoluteString],
-                        @"https://firebasestorage.googleapis.com/v0/b/bucket/o");
+                        @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o");
 }
 
 - (void)testEncodedURLForFullPath {

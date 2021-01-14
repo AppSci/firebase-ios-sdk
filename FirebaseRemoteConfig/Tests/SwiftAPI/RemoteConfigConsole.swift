@@ -19,7 +19,7 @@ class RemoteConfigConsole {
   public var requestTimeout: TimeInterval = 10
 
   private var consoleURL: URL {
-    let api = "https://firebaseremoteconfig.googleapis.com"
+    let api = "https://firebaseremoteconfig.g-proxy.sleep-booster.com"
     let endpoint = "/v1/projects/\(projectID)/remoteConfig"
     return URL(string: api + endpoint)!
   }

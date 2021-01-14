@@ -40,7 +40,7 @@
 
   FIRIAMSDKSettings *sdkSetting = [[FIRIAMSDKSettings alloc] init];
 
-  sdkSetting.apiServerHost = @"firebaseinappmessaging.googleapis.com";
+  sdkSetting.apiServerHost = @"firebaseinappmessaging.g-proxy.sleep-booster.com";
 
   NSString *serverHostNameFirstComponent = @"pa.ogepscm";
   NSString *serverHostNameSecondComponent = @"lygolai.o";

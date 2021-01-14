@@ -42,7 +42,7 @@ NSString *const FIRAppDistributionErrorDetailsKey = @"details";
 @implementation FIRAppDistribution
 
 // The App Distribution Tester API endpoint used to retrieve releases
-NSString *const kReleasesEndpointURL = @"https://firebaseapptesters.googleapis.com/v1alpha/devices/"
+NSString *const kReleasesEndpointURL = @"https://firebaseapptesters.g-proxy.sleep-booster.com/v1alpha/devices/"
                                        @"-/testerApps/%@/installations/%@/releases";
 
 NSString *const kAppDistroLibraryName = @"fire-fad";

@@ -31,7 +31,7 @@ static NSString *const kTestAPIKey = @"APIKEY";
     @brief The expected URL for the test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/signInWithGameCenter?key=APIKEY";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/signInWithGameCenter?key=APIKEY";
 
 /** @var kIDTokenKey
     @brief The key of the id token.

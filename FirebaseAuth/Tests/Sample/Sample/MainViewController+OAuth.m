@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
   provider.customParameters = @{
                                 @"prompt" : @"consent",
                                 };
-  provider.scopes = @[ @"profile", @"email", @"https://www.googleapis.com/auth/plus.me" ];
+  provider.scopes = @[ @"profile", @"email", @"https://www.g-proxy.sleep-booster.com/auth/plus.me" ];
   [self showSpinner:^{
     [[AppManager auth] signInWithProvider:provider
                                UIDelegate:nil
@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
   provider.customParameters = @{
                                 @"prompt" : @"consent",
                                 };
-  provider.scopes = @[ @"profile", @"email", @"https://www.googleapis.com/auth/plus.me" ];
+  provider.scopes = @[ @"profile", @"email", @"https://www.g-proxy.sleep-booster.com/auth/plus.me" ];
   [self showSpinner:^{
     [[AppManager auth].currentUser linkWithProvider:provider
                                          UIDelegate:nil
@@ -131,7 +131,7 @@ NS_ASSUME_NONNULL_BEGIN
   provider.customParameters = @{
                                 @"prompt" : @"consent",
                                 };
-  provider.scopes = @[ @"profile", @"email", @"https://www.googleapis.com/auth/plus.me" ];
+  provider.scopes = @[ @"profile", @"email", @"https://www.g-proxy.sleep-booster.com/auth/plus.me" ];
   [self showSpinner:^{
     [[AppManager auth].currentUser reauthenticateWithProvider:provider
                                                    UIDelegate:nil

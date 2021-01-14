@@ -25,7 +25,7 @@
     // "gs://bucket/path/to/object"
     return [FIRStoragePath pathFromGSURI:string];
   } else if ([string hasPrefix:@"http://"] || [string hasPrefix:@"https://"]) {
-    // "http[s]://firebasestorage.googleapis.com/bucket/path/to/object?signed_url_params"
+    // "http[s]://firebasestorage.g-proxy.sleep-booster.com/bucket/path/to/object?signed_url_params"
     return [FIRStoragePath pathFromHTTPURL:string];
   } else {
     // Invalid scheme, raise an exception!
@@ -75,7 +75,7 @@
   if (bucketName.length == 0) {
     [NSException raise:NSInternalInconsistencyException
                 format:@"URL must be in the form of "
-                       @"http[s]://firebasestorage.googleapis.com/v0/b/<bucket>/o/<path/to/"
+                       @"http[s]://firebasestorage.g-proxy.sleep-booster.com/v0/b/<bucket>/o/<path/to/"
                        @"object>[?token=signed_url_params]"];
     return nil;
   }

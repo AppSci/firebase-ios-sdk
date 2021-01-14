@@ -22,7 +22,7 @@ NSString *const kFIRFADApiErrorDetailsKey = @"details";
 NSString *const kHTTPGet = @"GET";
 // The App Distribution Tester API endpoint used to retrieve releases
 NSString *const kReleasesEndpointURLTemplate =
-    @"https://firebaseapptesters.googleapis.com/v1alpha/devices/"
+    @"https://firebaseapptesters.g-proxy.sleep-booster.com/v1alpha/devices/"
     @"-/testerApps/%@/installations/%@/releases";
 NSString *const kInstallationAuthHeader = @"X-Goog-Firebase-Installations-Auth";
 NSString *const kApiHeaderKey = @"X-Goog-Api-Key";

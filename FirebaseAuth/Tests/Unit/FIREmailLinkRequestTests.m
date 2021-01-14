@@ -65,7 +65,7 @@ static NSString *const kIDTokenKey = @"idToken";
     @brief The value of the expected URL (including the backend endpoint) in the request.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/emailLinkSignin?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/emailLinkSignin?key=APIKey";
 
 /** @class FIREmailLinkRequestTests
     @brief Tests for @c FIREmailLinkRequests.

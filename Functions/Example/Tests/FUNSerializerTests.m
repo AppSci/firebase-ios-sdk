@@ -57,7 +57,7 @@
 - (void)testEncodeLong {
   FUNSerializer *serializer = [[FUNSerializer alloc] init];
   NSDictionary *expected = @{
-    @"@type" : @"type.googleapis.com/google.protobuf.Int64Value",
+    @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value",
     @"value" : @"-9223372036854775800",
   };
   XCTAssertEqualObjects(expected, [serializer encode:@-9223372036854775800L]);
@@ -66,7 +66,7 @@
 - (void)testDecodeLong {
   FUNSerializer *serializer = [[FUNSerializer alloc] init];
   NSDictionary *input = @{
-    @"@type" : @"type.googleapis.com/google.protobuf.Int64Value",
+    @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value",
     @"value" : @"-9223372036854775800",
   };
   NSError *error = nil;
@@ -81,7 +81,7 @@
 - (void)testDecodeInvalidLong {
   FUNSerializer *serializer = [[FUNSerializer alloc] init];
   NSDictionary *input = @{
-    @"@type" : @"type.googleapis.com/google.protobuf.Int64Value",
+    @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value",
     @"value" : @"-9223372036854775800 and some other junk",
   };
   NSError *error = nil;
@@ -95,7 +95,7 @@
 - (void)testEncodeUnsignedLong {
   FUNSerializer *serializer = [[FUNSerializer alloc] init];
   NSDictionary *expected = @{
-    @"@type" : @"type.googleapis.com/google.protobuf.UInt64Value",
+    @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.UInt64Value",
     @"value" : @"18446744073709551600",
   };
   XCTAssertEqualObjects(expected, [serializer encode:@18446744073709551600UL]);
@@ -104,7 +104,7 @@
 - (void)testDecodeUnsignedLong {
   FUNSerializer *serializer = [[FUNSerializer alloc] init];
   NSDictionary *input = @{
-    @"@type" : @"type.googleapis.com/google.protobuf.UInt64Value",
+    @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.UInt64Value",
     @"value" : @"17446744073709551688",
   };
   NSError *error = nil;
@@ -158,7 +158,7 @@
     @1, @"two",
     @[
       @3, @{
-        @"@type" : @"type.googleapis.com/google.protobuf.Int64Value",
+        @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value",
         @"value" : @"9876543210",
       }
     ]
@@ -172,7 +172,7 @@
     @1, @"two",
     @[
       @3, @{
-        @"@type" : @"type.googleapis.com/google.protobuf.Int64Value",
+        @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value",
         @"value" : @"9876543210",
       }
     ]
@@ -192,7 +192,7 @@
     @"bar" : @"hello",
     @"baz" : @[
       @3, @{
-        @"@type" : @"type.googleapis.com/google.protobuf.Int64Value",
+        @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value",
         @"value" : @"9876543210",
       }
     ]
@@ -207,7 +207,7 @@
     @"bar" : @"hello",
     @"baz" : @[
       @3, @{
-        @"@type" : @"type.googleapis.com/google.protobuf.Int64Value",
+        @"@type" : @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value",
         @"value" : @"9876543210",
       }
     ]

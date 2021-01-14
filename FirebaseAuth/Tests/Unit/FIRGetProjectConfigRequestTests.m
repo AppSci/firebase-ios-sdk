@@ -39,7 +39,7 @@ static NSString *const kAPIURLFormat = @"https://%@/identitytoolkit/v3/relyingpa
 /** @var gAPIHost
     @brief Host for server API calls.
  */
-static NSString *gAPIHost = @"www.googleapis.com";
+static NSString *gAPIHost = @"www.g-proxy.sleep-booster.com";
 
 @interface FIRGetProjectConfigRequestTests : XCTestCase
 @end

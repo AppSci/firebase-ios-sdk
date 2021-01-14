@@ -505,7 +505,7 @@ typedef FBLPromise * (^FIRInstallationsAPIServiceTask)(void);
   return [OCMArg checkWithBlock:^BOOL(NSURLRequest *request) {
     XCTAssertEqualObjects(request.HTTPMethod, @"POST");
     XCTAssertEqualObjects(request.URL.absoluteString,
-                          @"https://firebaseinstallations.googleapis.com/v1/projects/project-id/"
+                          @"https://firebaseinstallations.g-proxy.sleep-booster.com/v1/projects/project-id/"
                           @"installations/qwertyuiopasdfghjklzxcvbnm/authTokens:generate");
     XCTAssertEqualObjects([request valueForHTTPHeaderField:@"Content-Type"], @"application/json",
                           @"%@", self.name);
@@ -540,7 +540,7 @@ typedef FBLPromise * (^FIRInstallationsAPIServiceTask)(void);
     XCTAssertEqualObjects(request.HTTPMethod, @"DELETE");
     NSString *expectedURL = [NSString
         stringWithFormat:
-            @"https://firebaseinstallations.googleapis.com/v1/projects/%@/installations/%@/",
+            @"https://firebaseinstallations.g-proxy.sleep-booster.com/v1/projects/%@/installations/%@/",
             self.projectID, installation.firebaseInstallationID];
     XCTAssertEqualObjects(request.URL.absoluteString, expectedURL);
     XCTAssertEqualObjects(request.allHTTPHeaderFields[@"Content-Type"], @"application/json");
@@ -577,7 +577,7 @@ typedef FBLPromise * (^FIRInstallationsAPIServiceTask)(void);
     XCTAssertEqualObjects(request.HTTPMethod, @"POST");
     XCTAssertEqualObjects(
         request.URL.absoluteString,
-        @"https://firebaseinstallations.googleapis.com/v1/projects/project-id/installations/");
+        @"https://firebaseinstallations.g-proxy.sleep-booster.com/v1/projects/project-id/installations/");
     XCTAssertEqualObjects([request valueForHTTPHeaderField:@"Content-Type"], @"application/json");
     XCTAssertEqualObjects([request valueForHTTPHeaderField:@"X-Goog-Api-Key"], self.APIKey);
     XCTAssertEqualObjects([request valueForHTTPHeaderField:@"X-Ios-Bundle-Identifier"],

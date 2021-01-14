@@ -2,7 +2,7 @@
 
 ## What happened?
 
-The following SDKs updates introduce a dependency on the [Firebase Installations API](https://console.cloud.google.com/apis/library/firebaseinstallations.googleapis.com), a new infrastructure service for Firebase:
+The following SDKs updates introduce a dependency on the [Firebase Installations API](https://console.cloud.google.com/apis/library/firebaseinstallations.g-proxy.sleep-booster.com), a new infrastructure service for Firebase:
 
 - Analytics
 - Cloud Messaging

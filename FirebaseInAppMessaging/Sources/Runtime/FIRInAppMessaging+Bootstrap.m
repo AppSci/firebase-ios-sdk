@@ -33,7 +33,7 @@
 
 static FIRIAMSDKSettings *_sdkSetting = nil;
 
-static NSString *_fiamServerHostName = @"firebaseinappmessaging.googleapis.com";
+static NSString *_fiamServerHostName = @"firebaseinappmessaging.g-proxy.sleep-booster.com";
 
 + (NSString *)getFiamServerHost {
   return _fiamServerHostName;

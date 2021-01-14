@@ -27,7 +27,7 @@ typedef void (^FIRMessagingContentHandler)(UNNotificationContent *content);
 static NSString *const kFCMPayloadOptionsName = @"fcm_options";
 static NSString *const kFCMPayloadOptionsImageURLName = @"image";
 static NSString *const kValidImageURL =
-    @"https://firebasestorage.googleapis.com/v0/b/fcm-ios-f7f9c.appspot.com/o/"
+    @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/fcm-ios-f7f9c.appspot.com/o/"
     @"chubbyBunny.jpg?alt=media&token=d6c56a57-c007-4b27-b20f-f267cc83e9e5";
 
 @interface FIRMessagingExtensionHelper (ExposedForTest)
