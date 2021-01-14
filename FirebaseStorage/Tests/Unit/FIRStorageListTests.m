@@ -106,7 +106,7 @@
   XCTestExpectation *expectation = [self expectationWithDescription:@"testDefaultList"];
   NSURL *expectedURL = [NSURL
       URLWithString:
-          @"https://firebasestorage.googleapis.com/v0/b/bucket/o?prefix=object/&delimiter=/"];
+          @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o?prefix=object/&delimiter=/"];
 
   self.fetcherService.testBlock =
       ^(GTMSessionFetcher *fetcher, GTMSessionFetcherTestResponse response) {
@@ -142,7 +142,7 @@
   XCTestExpectation *expectation =
       [self expectationWithDescription:@"testListWithPageSizeAndPageToken"];
   NSURL *expectedURL =
-      [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/bucket/"
+      [NSURL URLWithString:@"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/"
                            @"o?maxResults=42&delimiter=/&prefix=object/&pageToken=foo"];
 
   self.fetcherService.testBlock =
@@ -177,7 +177,7 @@
 
 - (void)testPercentEncodesPlusToken {
   XCTestExpectation *expectation = [self expectationWithDescription:@"testPercentEncodesPlusToken"];
-  NSURL *expectedURL = [NSURL URLWithString:@"https://firebasestorage.googleapis.com/v0/b/bucket/"
+  NSURL *expectedURL = [NSURL URLWithString:@"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/"
                                             @"o?prefix=%2Bfoo/&delimiter=/"];
 
   self.fetcherService.testBlock =
@@ -195,7 +195,7 @@
       };
 
   FIRStoragePath *path =
-      [FIRStoragePath pathFromString:@"https://firebasestorage.googleapis.com/v0/b/bucket/0/+foo"];
+      [FIRStoragePath pathFromString:@"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/0/+foo"];
   FIRStorageReference *ref = [[FIRStorageReference alloc] initWithStorage:self.storage path:path];
   FIRStorageListTask *task = [[FIRStorageListTask alloc]
       initWithReference:ref

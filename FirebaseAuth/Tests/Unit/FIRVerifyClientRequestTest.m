@@ -48,7 +48,7 @@ static NSString *const kIsSandboxKey = @"isSandbox";
     @brief The expected URL for the test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyClient?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/verifyClient?key=APIKey";
 
 /** @class FIRVerifyClientRequestTest
     @brief Tests for @c FIRVerifyClientRequests.

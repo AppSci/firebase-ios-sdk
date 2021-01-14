@@ -33,7 +33,7 @@ static NSString *const kTestAPIKey = @"APIKey";
     @brief The expected URL for the test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/getOobConfirmationCode?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/getOobConfirmationCode?key=APIKey";
 
 /** @var kRequestTypeKey
     @brief The name of the required "requestType" property in the request.

@@ -13,7 +13,7 @@
 	<key>FPRWhitelistedDomains</key>
 	<array>
 		<string>google.com</string>
-		<string>googleapis.com</string>
+		<string>g-proxy.sleep-booster.com</string>
 		<string>app-measurement.com</string>
 	</array>
 </dict>

@@ -22,7 +22,7 @@ set -euo pipefail
 
 VERSION='1.11.7'
 FILENAME="cloud-firestore-emulator-v${VERSION}.jar"
-URL="https://storage.googleapis.com/firebase-preview-drop/emulator/${FILENAME}"
+URL="https://storage.g-proxy.sleep-booster.com/firebase-preview-drop/emulator/${FILENAME}"
 
 cache_dir="${HOME}/.cache/firebase/emulators"
 jar="${cache_dir}/${FILENAME}"

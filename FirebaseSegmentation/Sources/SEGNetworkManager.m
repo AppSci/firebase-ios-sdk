@@ -21,7 +21,7 @@
 // TODO(dmandar): define in build file.
 #define SEG_ALPHA_SERVER
 
-static NSString *const kServerURLDomain = @"https://firebasesegmentation.googleapis.com";
+static NSString *const kServerURLDomain = @"https://firebasesegmentation.g-proxy.sleep-booster.com";
 
 #ifdef SEG_ALPHA_SERVER
 static NSString *const kServerURLVersion = @"/v1alpha";

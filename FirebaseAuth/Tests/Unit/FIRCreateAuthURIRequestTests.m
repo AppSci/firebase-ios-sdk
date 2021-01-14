@@ -52,7 +52,7 @@ static NSString *const kTestContinueURI = @"ContinueUri";
     @brief The expected URL for the test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/createAuthUri?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/createAuthUri?key=APIKey";
 
 /** @class FIRCreateAuthURIRequestTests
     @brief Tests for @c CreateAuthURIRequest.

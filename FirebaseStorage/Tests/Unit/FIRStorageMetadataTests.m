@@ -141,7 +141,7 @@
     kFIRStorageMetadataDownloadTokens : @"12345,ignored",
     kFIRStorageMetadataName : @"path/to/object",
   };
-  NSString *URLformat = @"https://firebasestorage.googleapis.com/v0/b/%@/o/%@?alt=media&token=%@";
+  NSString *URLformat = @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/%@/o/%@?alt=media&token=%@";
   NSString *expectedURL = [NSString
       stringWithFormat:URLformat, metaDict[kFIRStorageMetadataBucket],
                        [FIRStorageUtils GCSEscapedString:metaDict[kFIRStorageMetadataName]],

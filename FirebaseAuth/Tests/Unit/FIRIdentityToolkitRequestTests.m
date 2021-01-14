@@ -52,7 +52,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
       [[FIRIdentityToolkitRequest alloc] initWithEndpoint:kEndpoint
                                      requestConfiguration:requestConfiguration];
   NSString *expectedURL = [NSString
-      stringWithFormat:@"https://www.googleapis.com/identitytoolkit/v3/relyingparty/%@?key=%@",
+      stringWithFormat:@"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/%@?key=%@",
                        kEndpoint, kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);
@@ -72,7 +72,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
                                                useStaging:YES];
   NSString *expectedURL = [NSString
       stringWithFormat:
-          @"https://staging-www.sandbox.googleapis.com/identitytoolkit/v3/relyingparty/%@?key=%@",
+          @"https://staging-www.sandbox.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/%@?key=%@",
           kEndpoint, kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);
@@ -91,7 +91,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
                                       useIdentityPlatform:YES
                                                useStaging:NO];
   NSString *expectedURL = [NSString
-      stringWithFormat:@"https://identitytoolkit.googleapis.com/v2/%@?key=%@", kEndpoint, kAPIKey];
+      stringWithFormat:@"https://identitytoolkit.g-proxy.sleep-booster.com/v2/%@?key=%@", kEndpoint, kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);
 }
@@ -109,7 +109,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
                                       useIdentityPlatform:YES
                                                useStaging:YES];
   NSString *expectedURL = [NSString
-      stringWithFormat:@"https://staging-identitytoolkit.sandbox.googleapis.com/v2/%@?key=%@",
+      stringWithFormat:@"https://staging-identitytoolkit.sandbox.g-proxy.sleep-booster.com/v2/%@?key=%@",
                        kEndpoint, kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);
@@ -127,7 +127,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
       [[FIRIdentityToolkitRequest alloc] initWithEndpoint:kEndpoint
                                      requestConfiguration:requestConfiguration];
   NSString *expectedURL = [NSString
-      stringWithFormat:@"http://%@/www.googleapis.com/identitytoolkit/v3/relyingparty/%@?key=%@",
+      stringWithFormat:@"http://%@/www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/%@?key=%@",
                        kEmulatorHostAndPort, kEndpoint, kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);
@@ -147,7 +147,7 @@ static NSString *const kEmulatorHostAndPort = @"emulatorhost:12345";
                                       useIdentityPlatform:YES
                                                useStaging:NO];
   NSString *expectedURL =
-      [NSString stringWithFormat:@"http://%@/identitytoolkit.googleapis.com/v2/%@?key=%@",
+      [NSString stringWithFormat:@"http://%@/identitytoolkit.g-proxy.sleep-booster.com/v2/%@?key=%@",
                                  kEmulatorHostAndPort, kEndpoint, kAPIKey];
 
   XCTAssertEqualObjects(expectedURL, request.requestURL.absoluteString);

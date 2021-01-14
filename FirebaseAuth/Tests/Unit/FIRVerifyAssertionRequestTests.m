@@ -38,7 +38,7 @@ static NSString *const kPostBodyKey = @"postBody";
     @brief The expected URL for test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyAssertion?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/verifyAssertion?key=APIKey";
 
 /** @var kIDTokenKey
     @brief The name of the "idToken" property in the response.

