@@ -30,10 +30,10 @@ NSString *const kUnauthorizedResponseString =
 NSString *const kNotFoundResponseString = @"<html><body><p>Object not found.</p></body></html>";
 NSString *const kInvalidJSONResponseString = @"This is not a JSON object";
 NSString *const kFIRStorageObjectURL =
-    @"https://firebasestorage.googleapis.com/v0/b/bucket/o/object";
-NSString *const kFIRStorageBucketURL = @"https://firebasestorage.googleapis.com/v0/b/bucket/o";
+    @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/object";
+NSString *const kFIRStorageBucketURL = @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o";
 NSString *const kFIRStorageNotFoundURL =
-    @"https://firebasestorage.googleapis.com/v0/b/bucket/o/i/dont/exist";
+    @"https://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/i/dont/exist";
 NSString *const kFIRStorageTestAuthToken = @"1234-5678-9012-3456-7890";
 NSString *const kFIRStorageAppName = @"app";
 

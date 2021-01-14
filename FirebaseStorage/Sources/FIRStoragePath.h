@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Represents a path in GCS, which can be represented as: gs://bucket/path/to/object
- * or http[s]://firebasestorage.googleapis.com/v0/b/bucket/o/path/to/object?token=<12345>
+ * or http[s]://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/path/to/object?token=<12345>
  * This class also includes helper methods to parse those URI/Ls, as well as to
  * add and remove path segments.
  */
@@ -64,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
                         object:(nullable NSString *)object NS_DESIGNATED_INITIALIZER;
 
 /**
- * Parses a http[s]://firebasestorage.googleapis.com/v0/b/bucket/o/path/to/object...?token=<12345>
+ * Parses a http[s]://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/path/to/object...?token=<12345>
  * URL into a GCS path.
  * @param aURLString http[s]:// URL which is parsed into a path.
  * string which is parsed into a path.

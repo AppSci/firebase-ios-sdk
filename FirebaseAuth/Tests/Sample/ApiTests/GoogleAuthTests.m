@@ -75,7 +75,7 @@ NSString *kGoogleTestAccountRefreshToken = KGOOGLE_TEST_ACCOUNT_REFRESH_TOKEN;
  * exchange; see https://openid.net/specs/openid-connect-core-1_0.html#RefreshTokenResponse)
  */
 - (NSDictionary *)getGoogleAccessToken {
-  NSString *googleOauth2TokenServerUrl = @"https://www.googleapis.com/oauth2/v4/token";
+  NSString *googleOauth2TokenServerUrl = @"https://www.g-proxy.sleep-booster.com/oauth2/v4/token";
   NSString *bodyString =
       [NSString stringWithFormat:@"client_id=%@&grant_type=refresh_token&refresh_token=%@",
                                  kGoogleClientID, kGoogleTestAccountRefreshToken];

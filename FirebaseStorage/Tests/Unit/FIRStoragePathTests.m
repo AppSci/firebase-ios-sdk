@@ -30,7 +30,7 @@
 
 - (void)testHTTPURL {
   NSString *httpURL =
-      @"http://firebasestorage.googleapis.com/v0/b/bucket/o/path/to/object?token=signed_url_params";
+      @"http://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/path/to/object?token=signed_url_params";
   FIRStoragePath *path = [FIRStoragePath pathFromString:httpURL];
   XCTAssertEqualObjects(path.bucket, @"bucket");
   XCTAssertEqualObjects(path.object, @"path/to/object");
@@ -44,7 +44,7 @@
 
 - (void)testHTTPURLNoPath {
   FIRStoragePath *path =
-      [FIRStoragePath pathFromString:@"http://firebasestorage.googleapis.com/v0/b/bucket/"];
+      [FIRStoragePath pathFromString:@"http://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/"];
   XCTAssertEqualObjects(path.bucket, @"bucket");
   XCTAssertNil(path.object);
 }
@@ -57,7 +57,7 @@
 
 - (void)testHTTPURLNoTrailingSlash {
   FIRStoragePath *path =
-      [FIRStoragePath pathFromString:@"http://firebasestorage.googleapis.com/v0/b/bucket"];
+      [FIRStoragePath pathFromString:@"http://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket"];
   XCTAssertEqualObjects(path.bucket, @"bucket");
   XCTAssertNil(path.object);
 }
@@ -70,14 +70,14 @@
 
 - (void)testHTTPURLPercentEncoding {
   NSString *httpURL =
-      @"http://firebasestorage.googleapis.com/v0/b/bucket/o/%3F/%25/%23?token=signed_url_params";
+      @"http://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/%3F/%25/%23?token=signed_url_params";
   FIRStoragePath *path = [FIRStoragePath pathFromString:httpURL];
   XCTAssertEqualObjects(path.bucket, @"bucket");
   XCTAssertEqualObjects(path.object, @"?/%/#");
 }
 
 - (void)testHTTPURLNoToken {
-  NSString *httpURL = @"http://firebasestorage.googleapis.com/v0/b/bucket/o/%23hashtag/no/token";
+  NSString *httpURL = @"http://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/%23hashtag/no/token";
   FIRStoragePath *path = [FIRStoragePath pathFromString:httpURL];
   XCTAssertEqualObjects(path.bucket, @"bucket");
   XCTAssertEqualObjects(path.object, @"#hashtag/no/token");
@@ -88,11 +88,11 @@
 }
 
 - (void)testHTTPURLThrowsOnNoBucket {
-  XCTAssertThrows([FIRStoragePath pathFromString:@"http://firebasestorage.googleapis.com/"]);
+  XCTAssertThrows([FIRStoragePath pathFromString:@"http://firebasestorage.g-proxy.sleep-booster.com/"]);
 }
 
 - (void)testThrowsOnInvalidScheme {
-  NSString *ftpURL = @"ftp://firebasestorage.googleapis.com/v0/b/bucket/o/path/to/object";
+  NSString *ftpURL = @"ftp://firebasestorage.g-proxy.sleep-booster.com/v0/b/bucket/o/path/to/object";
   XCTAssertThrows([FIRStoragePath pathFromString:ftpURL]);
 }
 

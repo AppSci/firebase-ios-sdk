@@ -85,7 +85,7 @@ extension ModelInfoRetriever {
     let apiKey = options.apiKey
     var components = URLComponents()
     components.scheme = "https"
-    components.host = "firebaseml.googleapis.com"
+    components.host = "firebaseml.g-proxy.sleep-booster.com"
     components.path = "/v1beta2/projects/\(projectID)/models/\(modelName):download"
     components.queryItems = [URLQueryItem(name: "key", value: apiKey)]
     // TODO: handle nil

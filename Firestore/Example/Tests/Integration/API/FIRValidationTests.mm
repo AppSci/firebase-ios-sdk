@@ -45,7 +45,7 @@ namespace testutil = firebase::firestore::testutil;
   FIRFirestoreSettings *settings = self.db.settings;
   FSTAssertThrows(settings.host = nil,
                   @"Host setting may not be nil. You should generally just use the default value "
-                   "(which is firestore.googleapis.com)");
+                   "(which is firestore.g-proxy.sleep-booster.com)");
 }
 
 - (void)testNilDispatchQueueFails {

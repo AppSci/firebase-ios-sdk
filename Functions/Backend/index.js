@@ -22,7 +22,7 @@ exports.dataTest = functions.https.onRequest((request, response) => {
       int: 2,
       long: {
         value: '9876543210',
-        '@type': 'type.googleapis.com/google.protobuf.Int64Value',
+        '@type': 'type.g-proxy.sleep-booster.com/google.protobuf.Int64Value',
       },
       string: 'four',
       array: [5, 6],
@@ -35,7 +35,7 @@ exports.dataTest = functions.https.onRequest((request, response) => {
       code: 42,
       long: {
         value: '420',
-        '@type': 'type.googleapis.com/google.protobuf.Int64Value',
+        '@type': 'type.g-proxy.sleep-booster.com/google.protobuf.Int64Value',
       },
     }
   });
@@ -96,7 +96,7 @@ exports.explicitErrorTest = functions.https.onRequest((request, response) => {
         end: 20,
         long: {
           value: '30',
-          '@type': 'type.googleapis.com/google.protobuf.Int64Value',
+          '@type': 'type.g-proxy.sleep-booster.com/google.protobuf.Int64Value',
         },
       },
     },

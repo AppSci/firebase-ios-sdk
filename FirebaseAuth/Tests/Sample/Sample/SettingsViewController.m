@@ -44,12 +44,12 @@ static NSString *const kSecureTokenRequestClassName = @"FIRSecureTokenRequest";
 /** @var kIdentityToolkitSandboxHost
     @brief The host of Identity Toolkit sandbox server.
  */
-static NSString *const kIdentityToolkitSandboxHost = @"staging-www.sandbox.googleapis.com";
+static NSString *const kIdentityToolkitSandboxHost = @"staging-www.sandbox.g-proxy.sleep-booster.com";
 
 /** @var kSecureTokenSandboxHost
     @brief The host of Secure Token Service sandbox server.
  */
-static NSString *const kSecureTokenSandboxHost = @"staging-securetoken.sandbox.googleapis.com";
+static NSString *const kSecureTokenSandboxHost = @"staging-securetoken.sandbox.g-proxy.sleep-booster.com";
 
 /** @var kGoogleServiceInfoPlists
     @brief a C-array of plist file base names of Google service info to initialize FIRApp.

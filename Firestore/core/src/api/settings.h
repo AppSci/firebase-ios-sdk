@@ -34,7 +34,7 @@ class Settings {
  public:
   // Note: a constexpr array of char (`char[]`) doesn't work with Visual Studio
   // 2015.
-  static constexpr const char* DefaultHost = "firestore.googleapis.com";
+  static constexpr const char* DefaultHost = "firestore.g-proxy.sleep-booster.com";
   static constexpr bool DefaultSslEnabled = true;
   static constexpr bool DefaultPersistenceEnabled = true;
   static constexpr int64_t DefaultCacheSizeBytes = 100 * 1024 * 1024;

@@ -658,7 +658,7 @@ static NSString *const kFDLOtherPlatformParametersFallbackURLKey = @"ofl";
     return nil;
   }
 
-  static NSString *const kFDLURLShortenerAPIHost = @"https://firebasedynamiclinks.googleapis.com";
+  static NSString *const kFDLURLShortenerAPIHost = @"https://firebasedynamiclinks.g-proxy.sleep-booster.com";
   static NSString *const kFDLURLShortenerAPIPath = @"/v1/shortLinks";
   static NSString *const kFDLURLShortenerAPIQuery = @"?key=";
 

@@ -205,7 +205,7 @@ GrpcStreamTester::GrpcStreamTester(
     const std::shared_ptr<AsyncQueue>& worker_queue,
     ConnectivityMonitor* connectivity_monitor)
     : worker_queue_{NOT_NULL(worker_queue)},
-      database_info_{DatabaseId{"foo", "bar"}, "", "firestore.googleapis.com",
+      database_info_{DatabaseId{"foo", "bar"}, "", "firestore.g-proxy.sleep-booster.com",
                      false},
       fake_grpc_queue_{&grpc_queue_},
       firebase_metadata_provider_{CreateFirebaseMetadataProviderNoOp()},

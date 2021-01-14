@@ -19,9 +19,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *const kLongType = @"type.googleapis.com/google.protobuf.Int64Value";
-static NSString *const kUnsignedLongType = @"type.googleapis.com/google.protobuf.UInt64Value";
-static NSString *const kDateType = @"type.googleapis.com/google.protobuf.Timestamp";
+static NSString *const kLongType = @"type.g-proxy.sleep-booster.com/google.protobuf.Int64Value";
+static NSString *const kUnsignedLongType = @"type.g-proxy.sleep-booster.com/google.protobuf.UInt64Value";
+static NSString *const kDateType = @"type.g-proxy.sleep-booster.com/google.protobuf.Timestamp";
 
 @interface FUNSerializer () {
   NSDateFormatter *_dateFormatter;

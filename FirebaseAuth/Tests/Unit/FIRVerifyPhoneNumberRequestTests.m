@@ -89,7 +89,7 @@ static NSString *const kPhoneNumberKey = @"phoneNumber";
     @brief The expected URL for the test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPhoneNumber?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/verifyPhoneNumber?key=APIKey";
 
 /** @Extension FIRVerifyPhoneNumberRequest
     @brief Exposes FIRAuthOperationString from FIRVerifyPhoneNumberRequest to assist testing.

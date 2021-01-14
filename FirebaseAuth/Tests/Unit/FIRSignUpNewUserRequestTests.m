@@ -28,7 +28,7 @@
     @brief The expected URL for the test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/signupNewUser?key=APIKey";
 
 /** @var kTestAPIKey
     @brief Fake API key used for testing.

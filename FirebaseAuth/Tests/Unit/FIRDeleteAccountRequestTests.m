@@ -47,7 +47,7 @@ static NSString *const kAccessToken = @"AccessToken";
     @brief The expected URL for test calls.
  */
 static NSString *const kExpectedAPIURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/deleteAccount?key=APIKey";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/deleteAccount?key=APIKey";
 
 /** @class FIRDeleteUserRequestTests
     @brief Tests for @c FIRDeleteAccountRequest.

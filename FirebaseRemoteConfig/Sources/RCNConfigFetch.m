@@ -27,9 +27,9 @@
 
 #ifdef RCN_STAGING_SERVER
 static NSString *const kServerURLDomain =
-    @"https://staging-firebaseremoteconfig.sandbox.googleapis.com";
+    @"https://staging-firebaseremoteconfig.sandbox.g-proxy.sleep-booster.com";
 #else
-static NSString *const kServerURLDomain = @"https://firebaseremoteconfig.googleapis.com";
+static NSString *const kServerURLDomain = @"https://firebaseremoteconfig.g-proxy.sleep-booster.com";
 #endif
 
 static NSString *const kServerURLVersion = @"/v1";

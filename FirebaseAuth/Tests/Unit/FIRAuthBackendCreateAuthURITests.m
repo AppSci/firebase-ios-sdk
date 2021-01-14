@@ -41,7 +41,7 @@ static NSString *const kTestAPIKey = @"apikey_value";
     @brief The URL we are expecting should be requested by valid requests.
  */
 static NSString *const kTestExpectedRequestURL =
-    @"https://www.googleapis.com/identitytoolkit/v3/relyingparty/createAuthUri?key=apikey_value";
+    @"https://www.g-proxy.sleep-booster.com/identitytoolkit/v3/relyingparty/createAuthUri?key=apikey_value";
 
 /** @var kTestExpectedKind
     @brief The expected value for the "kind" parameter of a successful response.

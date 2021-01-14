@@ -51,7 +51,7 @@ class GoogleTests: TestsBase {
   // */
   func getGoogleAccessToken() -> Dictionary<String, Any> {
     var returnValue : Dictionary<String, Any> = [:]
-    let googleOauth2TokenServerUrl = "https://www.googleapis.com/oauth2/v4/token"
+    let googleOauth2TokenServerUrl = "https://www.g-proxy.sleep-booster.com/oauth2/v4/token"
     let bodyString = "client_id=\(Credentials.kGoogleClientID)&grant_type=refresh_token" +
       "&refresh_token=\(Credentials.kGoogleTestAccountRefreshToken)"
     let postData = bodyString.data(using: .utf8)

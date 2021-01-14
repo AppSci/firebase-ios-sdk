@@ -28,7 +28,7 @@
 #import "FirebaseInstallations/Source/Library/FIRInstallationsLogger.h"
 #import "FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.h"
 
-NSString *const kFIRInstallationsAPIBaseURL = @"https://firebaseinstallations.googleapis.com";
+NSString *const kFIRInstallationsAPIBaseURL = @"https://firebaseinstallations.g-proxy.sleep-booster.com";
 NSString *const kFIRInstallationsAPIKey = @"X-Goog-Api-Key";
 NSString *const kFIRInstallationsBundleId = @"X-Ios-Bundle-Identifier";
 NSString *const kFIRInstallationsIIDMigrationAuthHeader = @"x-goog-fis-ios-iid-migration-auth";

@@ -25,12 +25,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-NSString *const kApiaryRestBaseUrl = @"https://appinvite-pa.googleapis.com/v1";
-static NSString *const kiOSReopenRestBaseUrl = @"https://firebasedynamiclinks.googleapis.com/v1";
+NSString *const kApiaryRestBaseUrl = @"https://appinvite-pa.g-proxy.sleep-booster.com/v1";
+static NSString *const kiOSReopenRestBaseUrl = @"https://firebasedynamiclinks.g-proxy.sleep-booster.com/v1";
 
 // Endpoint for default retrieval process V2. (Endpoint version is V1)
 static NSString *const kIosPostInstallAttributionRestBaseUrl =
-    @"https://firebasedynamiclinks.googleapis.com/v1";
+    @"https://firebasedynamiclinks.g-proxy.sleep-booster.com/v1";
 
 static NSString *const kReasonString = @"reason";
 static NSString *const kiOSInviteReason = @"ios_invite";

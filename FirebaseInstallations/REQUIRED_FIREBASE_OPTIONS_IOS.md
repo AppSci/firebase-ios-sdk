@@ -13,7 +13,7 @@ Different Firebase services require different Firebase options to function prope
   Example value: `1:1234567890:ios:321abc456def7890`
 
 ## What do I need to know?
-To improve security Firebase SDK updates [on January 14](https://firebase.google.com/support/release-notes/ios#version_6150_-_january_14_2020) and afterwards replaced the Firebase Instance ID service with a dependency on the [Firebase Installations API](https://console.cloud.google.com/apis/library/firebaseinstallations.googleapis.com).
+To improve security Firebase SDK updates [on January 14](https://firebase.google.com/support/release-notes/ios#version_6150_-_january_14_2020) and afterwards replaced the Firebase Instance ID service with a dependency on the [Firebase Installations API](https://console.cloud.google.com/apis/library/firebaseinstallations.g-proxy.sleep-booster.com).
 
 Firebase Installations enforces the existence and validity of mandatory Firebase options API key, Project ID, and Application ID in order to associate client data with your Firebase project.
 

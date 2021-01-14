@@ -17,14 +17,14 @@
 #import "FirebaseStorage/Sources/FIRStorageConstants_Private.h"
 
 NSString *const kGCSScheme = @"https";
-NSString *const kGCSHost = @"www.googleapis.com";
+NSString *const kGCSHost = @"www.g-proxy.sleep-booster.com";
 NSString *const kGCSUploadPath = @"upload";
 NSString *const kGCSStorageVersionPath = @"storage/v1";
 NSString *const kGCSBucketPathFormat = @"b/%@";
 NSString *const kGCSObjectPathFormat = @"o/%@";
 
 NSString *const kFIRStorageScheme = @"https";
-NSString *const kFIRStorageHost = @"firebasestorage.googleapis.com";
+NSString *const kFIRStorageHost = @"firebasestorage.g-proxy.sleep-booster.com";
 NSString *const kFIRStorageVersionPath = @"v0";
 NSString *const kFIRStorageBucketPathFormat = @"b/%@";
 NSString *const kFIRStorageObjectPathFormat = @"o/%@";
